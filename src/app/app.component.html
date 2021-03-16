@@ -1,10 +1,18 @@
+<nav class="navbar">
+	<h1>News portal</h1>
+
+	<ul>
+		<li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+			<a routerLink="/">home</a>
+		</li>
+		<li routerLinkActive="active">
+			<a [routerLink]="['/news']">news-list</a>
+		</li>
+	</ul>
+</nav>
+
 <div class="container">
-
-	<div *ngIf="!apiHttpService.loading; else loadingBlock">
-		<app-news-list></app-news-list>
-	</div>
-
-	<ng-template #loadingBlock>загрузка...</ng-template>
+	<router-outlet></router-outlet>
 </div>
 
-<router-outlet></router-outlet>
+

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiHttpService} from "./services/api-http.service";
+import {ApiHttpService} from "./core/services/api-http.service";
 
 
 
@@ -11,14 +11,9 @@ import {ApiHttpService} from "./services/api-http.service";
 
 export class AppComponent implements OnInit {
 
-    constructor(
-        private apiHttpService: ApiHttpService
-    ) {}
+    constructor() {}
 
     ngOnInit() {
-        this.apiHttpService.fetchNews();
     }
-
-
 
 }

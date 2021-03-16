@@ -1,0 +1,26 @@
+<p *ngIf="error; else newsListBlock" class="error">{{error}}</p>
+
+<ng-template #newsListBlock>
+	<div *ngIf="newsList$ | async; else loadingBlock">
+		<table *ngIf="true; else notFoundMess;">
+			<thead>
+				<tr>
+					<th>Заголовок</th>
+					<th>Опубликовано</th>
+					<th>Новостной сайт</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let news of (newsList$ | async)">
+					<td>{{news.title}}</td>
+					<td>{{news.publishedAt}}</td>
+					<td>{{news.newsSite}}</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<ng-template #notFoundMess>Не найдено!</ng-template>
+	</div>
+
+	<ng-template #loadingBlock>загрузка...</ng-template>
+</ng-template>
