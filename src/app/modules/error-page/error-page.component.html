@@ -1,6 +1,9 @@
-<div>
-	<p>Такой страницы не существует!</p>
+<div class="page404 text-center">
+	<p class="page404__text error">
+		Такой страницы не существует!
+	</p>
+	<div>
+		<button class="btn btn-primary" [routerLink]="['/news']">На главную</button>
+	</div>
 </div>
-<div>
-	<button class="btn" routerLink="/news">Перейти на главную</button>
-</div>
+
