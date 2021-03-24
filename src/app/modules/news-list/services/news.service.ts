@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
-import {ApiHttpService} from "../../../core/services/api-http.service";
-import {Observable} from "rxjs";
-import {News} from "../models/news.inreface";
-import {HttpParams} from "@angular/common/http";
-import {map} from "rxjs/operators";
+import {ApiHttpService} from '../../../core/services/api-http.service';
+import {Observable} from 'rxjs';
+import {News} from '../models/news.inreface';
+import {HttpParams} from '@angular/common/http';
+import {map} from 'rxjs/operators';
 
 
 @Injectable({

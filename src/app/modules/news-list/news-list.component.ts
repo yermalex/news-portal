@@ -1,9 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-
-import {NewsService} from "./services/news.service";
-
-import {News} from "./models/news.inreface";
-import {Subscription} from "rxjs";
+import {NewsService} from './services/news.service';
+import {News} from './models/news.inreface';
+import {Subscription} from 'rxjs';
 
 
 @Component({

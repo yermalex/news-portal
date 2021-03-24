@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ActivatedRoute, Params} from "@angular/router";
-import {NewsService} from "../news-list/services/news.service";
-import {News} from "../news-list/models/news.inreface";
-import {Subscription} from "rxjs";
+import {ActivatedRoute, Params} from '@angular/router';
+import {NewsService} from '../news-list/services/news.service';
+import {News} from '../news-list/models/news.inreface';
+import {Subscription} from 'rxjs';
 
 @Component({
     selector: 'app-detailed-news',
