@@ -7,8 +7,8 @@ import {DetailedNewsComponent} from './modules/detailed-news/detailed-news.compo
 const routes: Routes = [
     {path: 'news', component: NewsListComponent},
     {path: 'news/:id', component: DetailedNewsComponent},
-    {path: '**', component: ErrorPageComponent},
-    {path: '', redirectTo: '/news', pathMatch: 'full'}
+    {path: '', redirectTo: '/news', pathMatch: 'full'},
+    {path: '**', component: ErrorPageComponent}
 ];
 
 @NgModule({
