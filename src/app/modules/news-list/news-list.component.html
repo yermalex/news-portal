@@ -1,0 +1,44 @@
+<div class="error text-center"
+     *ngIf="error; else newsListBlock"
+>
+	{{error}}
+</div>
+
+<ng-template #newsListBlock>
+
+	<app-filters
+		(onFilterNews)="filterNews($event)"
+		(onCleanInput)="cleanInput()"
+		[searchString]="searchString"
+	>
+	</app-filters>
+
+	<div *ngIf="newsList.length; else loading">
+		<p *ngIf="searchString.length > 0 && filteredNewsList.length === 0; else newsListBlock">
+			К сожалению, по запросу "{{searchString}}" ничего не найдено.
+		</p>
+
+		<ng-template #newsListBlock>
+			<table class="table">
+				<thead>
+				<tr>
+					<th>Заголовок</th>
+					<th>Опубликовано</th>
+					<th>Новостной сайт</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr *ngFor="let news of (filteredNewsList.length ? filteredNewsList : newsList)">
+					<td><a [routerLink]="['/news/', news.id]">{{news.title}}</a></td>
+					<td>{{news.publishedAt}}</td>
+					<td>{{news.newsSite}}</td>
+				</tr>
+				</tbody>
+			</table>
+		</ng-template>
+	</div>
+
+	<ng-template #loading>
+		<div id="loader"></div>
+	</ng-template>
+</ng-template>

@@ -1,0 +1,33 @@
+<div class="navigation">
+	<button class="btn" [routerLink]="['/news/']">Назад</button>
+</div>
+
+<div class="error text-center"
+     *ngIf="error; else newsBlock"
+>
+	{{error}}
+</div>
+
+<ng-template #newsBlock>
+	<article class="news"
+	         *ngIf="this.news; else loadingBlock"
+	>
+		<div class="news__img">
+			<img src="{{news.imageUrl}}" alt="{{news.title}}">
+		</div>
+
+		<div class="news__info">
+			<h1 class="news__title">{{news.title}}</h1>
+			<p class="news__summary">{{news.summary}}</p>
+			<small class="news__updatedAt">Обновлено: {{news.updatedAt | date:'dd.MM.yyyy HH:mm:ss'}}</small>
+			<small class="news__link">Ссылка на источник: <a href="{{news.url}}">{{news.url}}</a></small>
+		</div>
+	</article>
+
+	<ng-template #loadingBlock>
+		<div id="loader"></div>
+	</ng-template>
+</ng-template>
+
+
+

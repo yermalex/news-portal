@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ApiHttpService} from "./core/services/api-http.service";
-
 
 
 @Component({
@@ -11,7 +9,8 @@ import {ApiHttpService} from "./core/services/api-http.service";
 
 export class AppComponent implements OnInit {
 
-    constructor() {}
+    constructor() {
+    }
 
     ngOnInit() {
     }

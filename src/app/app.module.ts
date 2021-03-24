@@ -4,22 +4,24 @@ import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from "@angular/common/http";
-import {NewsListComponent} from './modules/news/news-list/news-list.component';
 import {FormsModule} from "@angular/forms";
-import { DetailedNewsComponent } from './modules/news/detailed-news/detailed-news.component';
+import {NewsListModule} from "./modules/news-list/news-list.module";
+import {ErrorPageComponent} from "./modules/error-page/error-page.component";
+import {DetailedNewsModule} from "./modules/detailed-news/detailed-news.module";
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        NewsListComponent,
-        DetailedNewsComponent
+        ErrorPageComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         AppRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        NewsListModule,
+        DetailedNewsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

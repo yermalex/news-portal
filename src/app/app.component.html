@@ -1,18 +1,5 @@
-<nav class="navbar">
-	<h1>News portal</h1>
-
-	<ul>
-		<li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-			<a routerLink="/">home</a>
-		</li>
-		<li routerLinkActive="active">
-			<a [routerLink]="['/news']">news-list</a>
-		</li>
-	</ul>
-</nav>
-
 <div class="container">
-	<router-outlet></router-outlet>
+	<section class="main">
+		<router-outlet></router-outlet>
+	</section>
 </div>
-
-
