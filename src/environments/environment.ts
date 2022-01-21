@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://test.spaceflightnewsapi.net/api'
+  apiUrl: 'https://api.spaceflightnewsapi.net'
 };
 
 /*

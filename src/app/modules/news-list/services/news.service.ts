@@ -19,7 +19,7 @@ export class NewsService {
         let params = new HttpParams();
         params = params.set('_limit', '30');
 
-        return this.apiHttpService.get('/v2/articles', {params})
+        return this.apiHttpService.get('/v3/articles', {params})
             .pipe(
                 map(newsList => {
                     newsList.map((newsItem) => {
@@ -35,7 +35,7 @@ export class NewsService {
     }
 
     getNewsById(id: string): Observable<News> {
-        return this.apiHttpService.get('/v2/articles/' + id);
+        return this.apiHttpService.get('/v3/articles/' + id);
     }
 
 
